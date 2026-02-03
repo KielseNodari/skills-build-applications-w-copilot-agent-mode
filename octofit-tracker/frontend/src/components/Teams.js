@@ -1,5 +1,7 @@
 
-// Teams component: fetches and displays team data from the API.
+// Teams component: fetches and displays team data from the REST API backend.
+// Uses codespace environment variable to build the correct API endpoint.
+// Logs the endpoint and fetched data for debugging.
 import React, { useEffect, useState } from 'react';
 
 // Dynamically build the API endpoint based on codespace environment.
@@ -9,10 +11,11 @@ const endpoint = codespace
   : '/api/teams/';
 
 function Teams() {
-  // State for team data
+  // State for team data (array of teams)
   const [data, setData] = useState([]);
   useEffect(() => {
-    // Fetch teams from API on mount
+    // Fetch teams from REST API on mount
+    // Handles both paginated (.results) and plain array responses
     console.log('Fetching teams from', endpoint);
     fetch(endpoint)
       .then(res => res.json())
@@ -25,6 +28,7 @@ function Teams() {
   }, []);
   return (
     // Render teams in a Bootstrap-styled table
+    // Table shows name and description for each team
     <div className="card mb-4">
       <div className="card-header bg-warning text-dark">
         <h2 className="mb-0">Teams</h2>

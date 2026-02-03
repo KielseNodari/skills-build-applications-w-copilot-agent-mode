@@ -1,5 +1,7 @@
 
-// Activities component: fetches and displays activity data from the API.
+// Activities component: fetches and displays activity data from the REST API backend.
+// Uses codespace environment variable to build the correct API endpoint.
+// Logs the endpoint and fetched data for debugging.
 import React, { useEffect, useState } from 'react';
 
 // Dynamically build the API endpoint based on codespace environment.
@@ -9,10 +11,11 @@ const endpoint = codespace
   : '/api/activities/';
 
 function Activities() {
-  // State for activity data
+  // State for activity data (array of activities)
   const [data, setData] = useState([]);
   useEffect(() => {
-    // Fetch activities from API on mount
+    // Fetch activities from REST API on mount
+    // Handles both paginated (.results) and plain array responses
     console.log('Fetching activities from', endpoint);
     fetch(endpoint)
       .then(res => res.json())
@@ -25,6 +28,7 @@ function Activities() {
   }, []);
   return (
     // Render activities in a Bootstrap-styled table
+    // Table shows type, duration, and date for each activity
     <div className="card mb-4">
       <div className="card-header bg-success text-white">
         <h2 className="mb-0">Activities</h2>

@@ -1,4 +1,5 @@
-// Entry point for the React app. Imports Bootstrap CSS and sets up routing.
+// Entry point for the React app.
+// Imports Bootstrap CSS for styling and sets up BrowserRouter for routing.
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

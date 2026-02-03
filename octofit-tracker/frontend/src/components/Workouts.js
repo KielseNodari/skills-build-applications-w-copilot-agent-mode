@@ -1,5 +1,7 @@
 
-// Workouts component: fetches and displays workout data from the API.
+// Workouts component: fetches and displays workout data from the REST API backend.
+// Uses codespace environment variable to build the correct API endpoint.
+// Logs the endpoint and fetched data for debugging.
 import React, { useEffect, useState } from 'react';
 
 // Dynamically build the API endpoint based on codespace environment.
@@ -9,10 +11,11 @@ const endpoint = codespace
   : '/api/workouts/';
 
 function Workouts() {
-  // State for workout data
+  // State for workout data (array of workouts)
   const [data, setData] = useState([]);
   useEffect(() => {
-    // Fetch workouts from API on mount
+    // Fetch workouts from REST API on mount
+    // Handles both paginated (.results) and plain array responses
     console.log('Fetching workouts from', endpoint);
     fetch(endpoint)
       .then(res => res.json())
@@ -25,6 +28,7 @@ function Workouts() {
   }, []);
   return (
     // Render workouts in a Bootstrap-styled table
+    // Table shows name and description for each workout
     <div className="card mb-4">
       <div className="card-header bg-danger text-white">
         <h2 className="mb-0">Workouts</h2>

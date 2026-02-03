@@ -1,4 +1,6 @@
-// Main App component. Sets up navigation and routes for OctoFit Tracker.
+// Main App component.
+// Sets up navigation menu using react-router-dom and displays all main components.
+// Navigation links route to Activities, Leaderboard, Teams, Users, and Workouts.
 import { NavLink, Routes, Route } from 'react-router-dom';
 import logo from '../public/logo192.png';
 import Activities from './components/Activities';

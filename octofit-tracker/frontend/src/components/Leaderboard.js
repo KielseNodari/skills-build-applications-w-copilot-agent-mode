@@ -1,5 +1,7 @@
 
-// Leaderboard component: fetches and displays leaderboard data from the API.
+// Leaderboard component: fetches and displays leaderboard data from the REST API backend.
+// Uses codespace environment variable to build the correct API endpoint.
+// Logs the endpoint and fetched data for debugging.
 import React, { useEffect, useState } from 'react';
 
 // Dynamically build the API endpoint based on codespace environment.
@@ -9,10 +11,11 @@ const endpoint = codespace
   : '/api/leaderboard/';
 
 function Leaderboard() {
-  // State for leaderboard data
+  // State for leaderboard data (array of leaderboard entries)
   const [data, setData] = useState([]);
   useEffect(() => {
-    // Fetch leaderboard from API on mount
+    // Fetch leaderboard from REST API on mount
+    // Handles both paginated (.results) and plain array responses
     console.log('Fetching leaderboard from', endpoint);
     fetch(endpoint)
       .then(res => res.json())
@@ -25,6 +28,7 @@ function Leaderboard() {
   }, []);
   return (
     // Render leaderboard in a Bootstrap-styled table
+    // Table shows team and points for each leaderboard entry
     <div className="card mb-4">
       <div className="card-header bg-info text-white">
         <h2 className="mb-0">Leaderboard</h2>
