@@ -1,5 +1,6 @@
 
 import { NavLink, Routes, Route } from 'react-router-dom';
+import logo from '../public/logo192.png';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
@@ -10,7 +11,10 @@ function App() {
   return (
     <div className="container mt-4">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 rounded">
-        <NavLink className="navbar-brand fw-bold text-white" to="/">OctoFit Tracker</NavLink>
+        <NavLink className="navbar-brand fw-bold text-white d-flex align-items-center" to="/">
+          <img src={logo} alt="OctoFit Logo" className="octofit-logo" />
+          OctoFit Tracker
+        </NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
