@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #222;
+}
+  /*
+    App.css: Main stylesheet for OctoFit Tracker React app.
+    - Adds color to background, text, tables, buttons, headings, links, and navigation.
+    - Uses gradients and Bootstrap overrides for a modern, friendly look.
+    - Brand logo and favicon are included for a polished appearance.
+  */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* Soft blue gradient background */
+    color: #222; /* Default text color */
+  }
+
+.navbar {
+  background: linear-gradient(90deg, #512a97 0%, #ecd8ff 100%) !important;
+  box-shadow: 0 2px 8px rgba(80,40,120,0.08);
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff !important;
+}
+.octofit-logo {
+  height: 40px;
+  margin-right: 12px;
+}
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+.nav-link.active, .nav-link:hover {
+  color: #512a97 !important;
+  background: #ecd8ff;
+  border-radius: 4px;
+}
+
+.card-header {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(80,40,120,0.04);
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f3eaff;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #ecd8ff;
+}
+
+.btn, .btn-primary {
+  background: #512a97;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.btn:hover, .btn-primary:hover {
+  background: #ecd8ff;
+  color: #512a97;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #512a97;
+  font-weight: 700;
+}
+
+a {
+  color: #512a97;
+  text-decoration: none;
+}
+a:hover {
+  color: #ecd8ff;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(80,40,120,0.06);
+}
+
+/* Custom modal styles */
+.modal-content {
+  border-radius: 10px;
+}
+.modal-header {
+  background: #ecd8ff;
+  color: #512a97;
+}
+.modal-footer {
+  background: #f3eaff;
+}
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
