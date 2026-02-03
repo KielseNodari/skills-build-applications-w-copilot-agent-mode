@@ -1,0 +1,14 @@
+# Ignore Python virtual environment
+backend/venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Environment files
+.env
