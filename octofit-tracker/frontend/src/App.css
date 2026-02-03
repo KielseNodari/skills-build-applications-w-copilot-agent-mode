@@ -4,6 +4,18 @@ body {
   background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   color: #222;
 }
+  /*
+    App.css: Main stylesheet for OctoFit Tracker React app.
+    - Adds color to background, text, tables, buttons, headings, links, and navigation.
+    - Uses gradients and Bootstrap overrides for a modern, friendly look.
+    - Brand logo and favicon are included for a polished appearance.
+  */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* Soft blue gradient background */
+    color: #222; /* Default text color */
+  }
 
 .navbar {
   background: linear-gradient(90deg, #512a97 0%, #ecd8ff 100%) !important;
