@@ -27,8 +27,8 @@ function Leaderboard() {
       .catch(e => console.error('Error fetching leaderboard:', e));
   }, []);
   return (
-    // Render leaderboard in a Bootstrap-styled table
-    // Table shows team and points for each leaderboard entry
+    // Render leaderboard in a Bootstrap card with a Bootstrap table
+    // Table uses striped and hover styles for clarity and consistency
     <div className="card mb-4">
       <div className="card-header bg-info text-white">
         <h2 className="mb-0">Leaderboard</h2>

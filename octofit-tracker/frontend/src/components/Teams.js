@@ -27,8 +27,8 @@ function Teams() {
       .catch(e => console.error('Error fetching teams:', e));
   }, []);
   return (
-    // Render teams in a Bootstrap-styled table
-    // Table shows name and description for each team
+    // Render teams in a Bootstrap card with a Bootstrap table
+    // Table uses striped and hover styles for clarity and consistency
     <div className="card mb-4">
       <div className="card-header bg-warning text-dark">
         <h2 className="mb-0">Teams</h2>

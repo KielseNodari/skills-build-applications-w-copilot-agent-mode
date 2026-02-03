@@ -27,8 +27,8 @@ function Users() {
       .catch(e => console.error('Error fetching users:', e));
   }, []);
   return (
-    // Render users in a Bootstrap-styled table
-    // Table shows name, email, and team for each user
+    // Render users in a Bootstrap card with a Bootstrap table
+    // Table uses striped and hover styles for clarity and consistency
     <div className="card mb-4">
       <div className="card-header bg-secondary text-white">
         <h2 className="mb-0">Users</h2>

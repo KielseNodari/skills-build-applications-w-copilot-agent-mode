@@ -27,8 +27,8 @@ function Activities() {
       .catch(e => console.error('Error fetching activities:', e));
   }, []);
   return (
-    // Render activities in a Bootstrap-styled table
-    // Table shows type, duration, and date for each activity
+    // Render activities in a Bootstrap card with a Bootstrap table
+    // Table uses striped and hover styles for clarity and consistency
     <div className="card mb-4">
       <div className="card-header bg-success text-white">
         <h2 className="mb-0">Activities</h2>

@@ -27,8 +27,8 @@ function Workouts() {
       .catch(e => console.error('Error fetching workouts:', e));
   }, []);
   return (
-    // Render workouts in a Bootstrap-styled table
-    // Table shows name and description for each workout
+    // Render workouts in a Bootstrap card with a Bootstrap table
+    // Table uses striped and hover styles for clarity and consistency
     <div className="card mb-4">
       <div className="card-header bg-danger text-white">
         <h2 className="mb-0">Workouts</h2>
