@@ -2,7 +2,7 @@
 // Sets up navigation menu using react-router-dom and displays all main components.
 // Navigation links route to Activities, Leaderboard, Teams, Users, and Workouts.
 import { NavLink, Routes, Route } from 'react-router-dom';
-import logo from '../public/logo192.png';
+
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
@@ -14,7 +14,8 @@ function App() {
     <div className="container mt-4">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 rounded">
         <NavLink className="navbar-brand fw-bold text-white d-flex align-items-center" to="/">
-          <img src={logo} alt="OctoFit Logo" className="octofit-logo" />
+          {/* Use logo from public directory */}
+          <img src="/logo192.png" alt="OctoFit Logo" className="octofit-logo" />
           OctoFit Tracker
         </NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
